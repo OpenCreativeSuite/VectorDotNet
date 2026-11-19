@@ -1,0 +1,95 @@
+/* Icon font, mirrored from Font Awesome Free metadata. Only the glyphs the
+   interface uses are declared, so a class rule is a plain content declaration. */
+
+@font-face {
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-weight: 700;
+    src: url("assets/fa-solid-900.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-weight: 400;
+    src: url("assets/fa-regular-400.ttf") format("truetype");
+}
+
+.fa {
+    display: inline-block;
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+}
+
+.fa-regular {
+    font-weight: 400;
+}
+
+.fa-arrow-pointer::before { content: "\f245"; }
+.fa-pen-nib::before { content: "\f5a9"; }
+.fa-bezier-curve::before { content: "\f55b"; }
+.fa-pencil::before { content: "\f303"; }
+.fa-draw-polygon::before { content: "\f5ee"; }
+.fa-square::before { content: "\f0c8"; }
+.fa-circle::before { content: "\f111"; }
+.fa-shapes::before { content: "\f61f"; }
+.fa-star::before { content: "\f005"; }
+.fa-circle-notch::before { content: "\f1ce"; }
+.fa-slash::before { content: "\f715"; }
+.fa-font::before { content: "\f031"; }
+.fa-magnifying-glass::before { content: "\f002"; }
+.fa-hand::before { content: "\f256"; }
+.fa-up-down-left-right::before { content: "\f0b2"; }
+.fa-vector-square::before { content: "\f5cb"; }
+.fa-rotate-left::before { content: "\f2ea"; }
+.fa-rotate-right::before { content: "\f2f9"; }
+.fa-plus::before { content: "\f067"; }
+.fa-minus::before { content: "\f068"; }
+.fa-border-all::before { content: "\f84c"; }
+.fa-magnet::before { content: "\f076"; }
+.fa-ruler::before { content: "\f545"; }
+.fa-align-left::before { content: "\f036"; }
+.fa-align-center::before { content: "\f037"; }
+.fa-align-right::before { content: "\f038"; }
+.fa-object-group::before { content: "\f247"; }
+.fa-object-ungroup::before { content: "\f248"; }
+.fa-layer-group::before { content: "\f5fd"; }
+.fa-sliders::before { content: "\f1de"; }
+.fa-chevron-down::before { content: "\f078"; }
+.fa-chevron-right::before { content: "\f054"; }
+.fa-chevron-up::before { content: "\f077"; }
+.fa-xmark::before { content: "\f00d"; }
+.fa-check::before { content: "\f00c"; }
+.fa-file::before { content: "\f15b"; }
+.fa-folder-open::before { content: "\f07c"; }
+.fa-floppy-disk::before { content: "\f0c7"; }
+.fa-file-export::before { content: "\f56e"; }
+.fa-palette::before { content: "\f53f"; }
+.fa-droplet::before { content: "\f043"; }
+.fa-fill-drip::before { content: "\f576"; }
+.fa-eye::before { content: "\f06e"; }
+.fa-eye-slash::before { content: "\f070"; }
+.fa-lock::before { content: "\f023"; }
+.fa-lock-open::before { content: "\f3c1"; }
+.fa-trash-can::before { content: "\f2ed"; }
+.fa-copy::before { content: "\f0c5"; }
+.fa-arrow-up::before { content: "\f062"; }
+.fa-arrow-down::before { content: "\f063"; }
+.fa-arrow-down-long::before { content: "\f175"; }
+.fa-circle-info::before { content: "\f05a"; }
+.fa-swatchbook::before { content: "\f5c3"; }
+.fa-arrow-right-arrow-left::before { content: "\f0ec"; }
+.fa-circle-half-stroke::before { content: "\f042"; }
+.fa-wand-magic-sparkles::before { content: "\e2ca"; }
+.fa-grip::before { content: "\f58d"; }
+.fa-paintbrush::before { content: "\f1fc"; }
+.fa-download::before { content: "\f019"; }
+.fa-eraser::before { content: "\f12d"; }
+.fa-crop-simple::before { content: "\f565"; }
+.fa-mask::before { content: "\f6fa"; }
+.fa-paste::before { content: "\f0ea"; }
+.fa-scissors::before { content: "\f0c4"; }
+.fa-clock-rotate-left::before { content: "\f1da"; }

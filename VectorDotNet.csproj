@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>VectorDotNet</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <DefaultItemExcludes>$(DefaultItemExcludes);builds/**</DefaultItemExcludes>
+    <DonkehVersion Condition="'$(DonkehVersion)' == ''">1.0.43</DonkehVersion>
+    <!-- HtmlHelper drops null children at runtime, which is what makes Show(...)
+         composable, but the parameters are annotated as Node[] rather than
+         Node?[]. Passing a conditional child is correct and the warning is noise. -->
+    <NoWarn>$(NoWarn);CS8604</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Donkeh.Windowing" Version="$(DonkehVersion)" />
+  </ItemGroup>
+
+  <!-- Every [assembly: Stylesheet(...)] path must also be embedded here. -->
+  <ItemGroup>
+    <EmbeddedResource Include="src/Components/App/App.css" Watch="false" />
+    <EmbeddedResource Include="src/Components/Icons/Icons.css" Watch="false" />
+  </ItemGroup>
+
+  <!-- Icon font face, resolved relative to the executable. -->
+  <ItemGroup>
+    <Content Include="assets/fa-solid-900.ttf" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="assets/fa-regular-400.ttf" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- Add Android or browser targets with:
+       donkeh enable-target android
+       donkeh enable-target web -->
+
+</Project>

@@ -1,0 +1,64 @@
+namespace VectorDotNet.Components;
+
+/// <summary>Font Awesome glyph classes used across the interface.</summary>
+internal static class Icons
+{
+    public const string Select = "fa-arrow-pointer";
+    public const string Direct = "fa-pen-nib";
+    public const string Pen = "fa-bezier-curve";
+    public const string Pencil = "fa-pencil";
+    public const string Rectangle = "fa-square";
+    public const string RoundedRectangle = "fa-vector-square";
+    public const string Ellipse = "fa-circle";
+    public const string Polygon = "fa-draw-polygon";
+    public const string Star = "fa-star";
+    public const string Line = "fa-slash";
+    public const string Spiral = "fa-circle-notch";
+    public const string Text = "fa-font";
+    public const string Lasso = "fa-shapes";
+    public const string Zoom = "fa-magnifying-glass";
+    public const string Hand = "fa-hand";
+    public const string Move = "fa-up-down-left-right";
+    public const string Undo = "fa-rotate-left";
+    public const string Redo = "fa-rotate-right";
+    public const string Plus = "fa-plus";
+    public const string Minus = "fa-minus";
+    public const string Grid = "fa-border-all";
+    public const string Snap = "fa-magnet";
+    public const string Ruler = "fa-ruler";
+    public const string AlignLeft = "fa-align-left";
+    public const string AlignCenter = "fa-align-center";
+    public const string AlignRight = "fa-align-right";
+    public const string Group = "fa-object-group";
+    public const string Ungroup = "fa-object-ungroup";
+    public const string Layers = "fa-layer-group";
+    public const string Sliders = "fa-sliders";
+    public const string ChevronDown = "fa-chevron-down";
+    public const string ChevronRight = "fa-chevron-right";
+    public const string ChevronUp = "fa-chevron-up";
+    public const string Close = "fa-xmark";
+    public const string Check = "fa-check";
+    public const string Document = "fa-file";
+    public const string Folder = "fa-folder-open";
+    public const string Save = "fa-floppy-disk";
+    public const string Export = "fa-download";
+    public const string Palette = "fa-palette";
+    public const string Droplet = "fa-droplet";
+    public const string Fill = "fa-fill-drip";
+    public const string Eye = "fa-eye";
+    public const string EyeOff = "fa-eye-slash";
+    public const string Lock = "fa-lock";
+    public const string Unlock = "fa-lock-open";
+    public const string Trash = "fa-trash-can";
+    public const string Duplicate = "fa-copy";
+    public const string ArrowUp = "fa-arrow-up";
+    public const string ArrowDown = "fa-arrow-down";
+    public const string Info = "fa-circle-info";
+    public const string Swatches = "fa-swatchbook";
+    public const string Swap = "fa-arrow-right-arrow-left";
+    public const string Blend = "fa-circle-half-stroke";
+    public const string Magic = "fa-wand-magic-sparkles";
+    public const string Grip = "fa-grip";
+    public const string Paste = "fa-paste";
+    public const string Scissors = "fa-scissors";
+}

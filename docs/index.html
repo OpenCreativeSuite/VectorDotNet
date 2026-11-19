@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VectorDotNet Guide</title>
+    <meta name="description" content="Learn VectorDotNet: a free, open-source vector graphics studio for illustration, paths, layers, typography and SVG.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar-inner">
+        <a class="brand" href="index.html">
+            <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+            VectorDotNet Guide
+        </a>
+        <nav class="mainnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="#features">Features</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#start">Get started</a>
+            <a href="#shortcuts">Shortcuts</a>
+            <a href="https://github.com/OpenCreativeSuite/VectorDotNet">GitHub</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div>
+            <p class="eyebrow">Free vector graphics studio · Windows, Linux, macOS</p>
+            <h1>Draw vectors. Keep every curve.</h1>
+            <p class="lead">A professional vector workspace for illustration, icons, logos and layout. Real Bézier paths, live shapes, layers, typography and SVG — with no account, subscription or cloud dependency.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="https://github.com/OpenCreativeSuite/VectorDotNet/releases/latest">Download for free</a>
+                <a class="btn btn-quiet" href="#start">Start drawing</a>
+            </div>
+            <p class="hero-note">Everything runs locally. Your artwork is never uploaded anywhere.</p>
+        </div>
+        <figure>
+            <img src="screenshots/main.png" alt="The VectorDotNet main window with a sample vector poster and a selected shape">
+            <figcaption>A large canvas, a focused tool rail, contextual options and a full inspector. The sample poster shows live shapes, strokes and text.</figcaption>
+        </figure>
+    </section>
+
+    <section id="features">
+        <h2>A real vector engine, not a drawing overlay</h2>
+        <p>Curves stay curves at every zoom level. The document is a tree of paths, groups, layers and artboards, rendered by an anti-aliased scanline rasteriser written for this application.</p>
+        <div class="grid3">
+            <div class="card">
+                <h3>Paths and live shapes</h3>
+                <p>Cubic Bézier paths with node and handle editing, nonzero and even-odd fills, strokes with caps, joins and dashes, plus live rectangles, ellipses, polygons, stars, lines and spirals.</p>
+            </div>
+            <div class="card">
+                <h3>Layers and transforms</h3>
+                <p>Nested groups, per-layer visibility and locking, object opacity, eight-handle scaling, rotation-ready transforms and multiple artboards.</p>
+            </div>
+            <div class="card">
+                <h3>Colour and type</h3>
+                <p>A full HSV colour picker with alpha, recent colours and an automatic palette from the artwork. Point text with any installed font family, weight, italic and size.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>A look around</h2>
+        <div class="grid3">
+            <figure>
+                <img src="screenshots/canvas.png" alt="The canvas with a vector poster">
+                <figcaption>Artboards, rulers and a pasteboard that keeps the document centred.</figcaption>
+            </figure>
+            <figure>
+                <img src="screenshots/colour.png" alt="The colour picker with saturation field, hue strip and alpha strip">
+                <figcaption>Colour picker with live preview, HEX/RGB/alpha entry, history and document colours.</figcaption>
+            </figure>
+            <figure>
+                <img src="screenshots/fonts.png" alt="The searchable font picker with live previews">
+                <figcaption>Searchable system font list with each family shown in its own face.</figcaption>
+            </figure>
+            <figure>
+                <img src="screenshots/files.png" alt="The in-app file browser showing an SVG file">
+                <figcaption>In-app file browsing for SVG import and export, with shortcut folders.</figcaption>
+            </figure>
+            <figure>
+                <img src="screenshots/svg.png" alt="An imported SVG document with groups and paths in the layers panel">
+                <figcaption>SVG import keeps groups, paths, text, transforms and font families editable.</figcaption>
+            </figure>
+            <figure>
+                <img src="screenshots/layers.png" alt="The layers and appearance inspector">
+                <figcaption>Layer tree, visibility, locks, appearance and transform controls in one inspector.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="what">
+        <h2>What you can do</h2>
+        <table>
+            <thead>
+                <tr><th>I want to…</th><th>VectorDotNet can</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Draw a logo or icon</td><td>Use the rectangle, ellipse, polygon, star and pen tools, then edit the path nodes directly.</td></tr>
+                <tr><td>Keep a shape editable</td><td>Live shapes keep their parameters. Change corner radius, star points or spiral turns later.</td></tr>
+                <tr><td>Align several objects</td><td>Align to the selection or the artboard, distribute spacing, or drag with smart alignment guides and snapping.</td></tr>
+                <tr><td>Add a title</td><td>Place point text, choose any installed font, adjust size, weight and slant, or load a font file at runtime.</td></tr>
+                <tr><td>Reuse artwork across documents</td><td>Group objects, duplicate in place, or copy and paste between open document tabs.</td></tr>
+                <tr><td>Work on several designs at once</td><td>Open multiple document tabs. Each keeps its own view, selection and undo history.</td></tr>
+                <tr><td>Bring in an existing SVG</td><td>File → Import SVG reads paths, arcs, shapes, groups, transforms, text and <code>&lt;use&gt;</code> references.</td></tr>
+                <tr><td>Hand off clean vectors</td><td>File → Export SVG or SVGZ writes standards-compliant paths, strokes, dashes, transforms and text.</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="start">
+        <h2>Get started</h2>
+        <ol class="steps">
+            <li><strong>Run it.</strong> Download a release for your platform, or run <code>dotnet run</code> from a checkout with the .NET 10 SDK.</li>
+            <li><strong>Try the sample.</strong> Choose <strong>File → Open Sample</strong> to open the poster in a new tab.</li>
+            <li><strong>Draw.</strong> Press <kbd>M</kbd> for a rectangle, <kbd>E</kbd> for an ellipse, or <kbd>P</kbd> for the pen. Hold <kbd>Shift</kbd> to constrain proportions.</li>
+            <li><strong>Edit the curve.</strong> Switch to <kbd>A</kbd> (Direct Selection) and drag anchors or Bézier handles.</li>
+            <li><strong>Style it.</strong> Click the fill or stroke swatch in the inspector to open the colour picker.</li>
+            <li><strong>Export.</strong> Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> and choose a destination in the file browser.</li>
+        </ol>
+        <div class="tip">
+            <strong>Undo everything</strong>
+            Document edits, transforms, colour changes, node edits and text changes all record undo steps. Each tab has its own history.
+        </div>
+    </section>
+
+    <section id="shortcuts">
+        <h2>Keyboard shortcuts</h2>
+        <table>
+            <thead><tr><th>Action</th><th>Shortcut</th></tr></thead>
+            <tbody>
+                <tr><td>Selection / Direct Selection</td><td><kbd>V</kbd> / <kbd>A</kbd></td></tr>
+                <tr><td>Pen / Pencil / Lasso</td><td><kbd>P</kbd> / <kbd>N</kbd> / <kbd>Q</kbd></td></tr>
+                <tr><td>Rectangle / Rounded / Ellipse</td><td><kbd>M</kbd> / <kbd>R</kbd> / <kbd>E</kbd></td></tr>
+                <tr><td>Polygon / Star / Line</td><td><kbd>G</kbd> / <kbd>S</kbd> / <kbd>L</kbd></td></tr>
+                <tr><td>Text / Zoom / Hand</td><td><kbd>T</kbd> / <kbd>Z</kbd> / <kbd>H</kbd></td></tr>
+                <tr><td>Undo / Redo</td><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd></td></tr>
+                <tr><td>Cut / Copy / Paste / Duplicate</td><td><kbd>Ctrl</kbd>+<kbd>X</kbd> / <kbd>C</kbd> / <kbd>V</kbd> / <kbd>D</kbd></td></tr>
+                <tr><td>Group / Ungroup</td><td><kbd>Ctrl</kbd>+<kbd>G</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd></td></tr>
+                <tr><td>Import / Export SVG</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd></td></tr>
+                <tr><td>Nudge (×10 with Shift)</td><td>Arrow keys</td></tr>
+                <tr><td>Zoom in / out</td><td><kbd>Ctrl</kbd>+<kbd>+</kbd> / <kbd>Ctrl</kbd>+<kbd>−</kbd>, or Ctrl+wheel</td></tr>
+                <tr><td>Pan</td><td>Middle mouse drag, or <kbd>H</kbd> and drag</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="promise">
+        <h2>Free, open and private</h2>
+        <p>VectorDotNet is free software. There is no paid tier, no subscription, no account, no advertising and no telemetry. Files are opened, edited and exported on your own computer. The optional font loader reads the font file you choose; it does not contact a font service.</p>
+        <div class="grid3">
+            <div class="card">
+                <h3>Every feature included</h3>
+                <p>No feature gates, no export watermarks and no cloud-only tools.</p>
+            </div>
+            <div class="card">
+                <h3>Standards first</h3>
+                <p>SVG in and out, ordinary system fonts, and a document model that keeps vectors editable.</p>
+            </div>
+            <div class="card">
+                <h3>Yours to extend</h3>
+                <p>The vector engine and document model live in plain C# under <code>src/Core</code>, separate from the UI.</p>
+            </div>
+        </div>
+    </section>
+
+    <h2>Run from source</h2>
+    <p>You need the <a href="https://dotnet.microsoft.com/download">.NET 10 SDK</a>.</p>
+    <pre><code>dotnet run</code></pre>
+    <p>The desktop host opens an OpenGL window. The source layout is described in the repository <a href="https://github.com/OpenCreativeSuite/VectorDotNet#layout">README</a>.</p>
+
+    <div class="pager">
+        <a href="https://github.com/OpenCreativeSuite/VectorDotNet">Source code</a>
+        <a href="https://github.com/OpenCreativeSuite/VectorDotNet/releases/latest">Latest release</a>
+        <a href="https://github.com/OpenCreativeSuite/VectorDotNet/issues">Report an issue</a>
+    </div>
+</main>
+</body>
+</html>
