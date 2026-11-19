@@ -1,6 +1,6 @@
 # VectorDotNet
 
-**A free, open-source vector graphics studio for illustration, icons, logos and layout.** Draw real Bézier paths, shape them, style them and export clean SVG — without an account, a subscription, a cloud upload or a feature gate.
+**A free, source-available vector graphics studio for illustration, icons, logos and layout.** Draw real Bézier paths, shape them, style them and export clean SVG — without an account, a subscription, a cloud upload or a feature gate.
 
 [![Download the latest release](https://img.shields.io/github/v/release/OpenCreativeSuite/VectorDotNet?label=Download&style=for-the-badge)](https://github.com/OpenCreativeSuite/VectorDotNet/releases/latest)
 [![Read the user guide](https://img.shields.io/badge/Read-the%20guide-ffc24d?style=for-the-badge)](https://opencreativesuite.github.io/VectorDotNet/)
@@ -87,6 +87,12 @@ dotnet run
 ```
 
 Or start the built `VectorDotNet` executable from `bin/`.
+
+## Licence
+
+VectorDotNet is free for personal and commercial use, including internal business use. The source is available under the **Apache License 2.0 with the Commons Clause**: you can use, modify and share it, but you may not sell the software itself or a product whose value derives substantially from it. The artwork you make is yours.
+
+See [LICENSE.md](LICENSE.md) for the full terms and a plain-English summary.
 
 ## Learn the app
 
