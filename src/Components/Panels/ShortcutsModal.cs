@@ -59,7 +59,7 @@ internal sealed class ShortcutsModal : Component
         {
             list.Add(Div(new() { ClassName = "shortcut-row" },
                 Span(new() { }, Text(label)),
-                H("kbd", new() { }, Text(key))));
+                H("kbd", new Props(), Text(key))));
         }
 
         return Div(new() { }, list.ToArray());

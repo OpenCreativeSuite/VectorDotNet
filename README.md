@@ -88,6 +88,15 @@ dotnet run
 
 Or start the built `VectorDotNet` executable from `bin/`.
 
+Run the unit tests with:
+
+```sh
+dotnet test tests/VectorDotNet.Tests/VectorDotNet.Tests.csproj
+```
+
+The suite covers the vector geometry, rasteriser, SVG import/export, editor
+session, and every component through the headless `Donkeh.Testing` harness.
+
 ## Licence
 
 VectorDotNet is free for personal and commercial use, including internal business use. The source is available under the **Apache License 2.0 with the Commons Clause**: you can use, modify and share it, but you may not sell the software itself or a product whose value derives substantially from it. The artwork you make is yours.

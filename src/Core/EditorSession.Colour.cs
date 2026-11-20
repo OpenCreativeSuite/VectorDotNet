@@ -48,17 +48,23 @@ public sealed partial class EditorSession
             List<uint> colours = [];
             foreach (SceneObject item in Document.Root.SelfAndDescendants())
             {
-                switch (item)
+                // A filled object may also carry a visible stroke, so inspect both
+                // faces instead of using a switch that only visits the first match.
+                if (item is PathObject path)
                 {
-                    case PathObject { Fill: { } fill }:
+                    if (path.Fill is { } fill)
+                    {
                         AddColour(fill.Color);
-                        break;
-                    case PathObject { Stroke: { } stroke }:
+                    }
+
+                    if (path.Stroke is { } stroke)
+                    {
                         AddColour(stroke.Paint.Color);
-                        break;
-                    case TextObject { Fill: { } textFill }:
-                        AddColour(textFill.Color);
-                        break;
+                    }
+                }
+                else if (item is TextObject { Fill: { } textFill })
+                {
+                    AddColour(textFill.Color);
                 }
             }
 
@@ -105,12 +111,14 @@ public sealed partial class EditorSession
         _colourBackup.Clear();
         foreach (PathObject path in Selection.OfType<PathObject>())
         {
-            _colourBackup.Add((path, path.Fill, path.Stroke));
+            // Clone the stroke: previewing a stroke colour mutates its paint in
+            // place, so keeping the same reference would make Cancel a no-op.
+            _colourBackup.Add((path, path.Fill?.Clone(), path.Stroke?.Clone()));
         }
 
         foreach (TextObject text in Selection.OfType<TextObject>())
         {
-            _colourBackup.Add((text, text.Fill, null));
+            _colourBackup.Add((text, text.Fill?.Clone(), null));
         }
 
         _backupFill = FillColor;

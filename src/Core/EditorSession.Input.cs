@@ -171,7 +171,18 @@ public sealed partial class EditorSession
                 break;
 
             case DragKind.Marquee:
+                Touch();
+                break;
+
             case DragKind.Lasso:
+                // The lasso only has the down point until moves are appended. A
+                // one-pixel threshold keeps the polygon compact without dropping
+                // the corners of a deliberate selection.
+                if (_lasso.Count == 0 || Vec2.Distance(_lasso[^1], document) >= 1f / Zoom)
+                {
+                    _lasso.Add(document);
+                }
+
                 Touch();
                 break;
 
