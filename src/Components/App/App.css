@@ -76,11 +76,24 @@ button {
     line-height: normal;
     color: var(--text);
     background-color: var(--bg-chrome);
+    background-image: none;
+    box-shadow: none;
+    height: auto;
+    padding: 0;
     border: 0;
     border-radius: var(--radius-sm);
     box-sizing: border-box;
     margin: 0;
     cursor: pointer;
+}
+
+/* The native hover/active rules are more specific than the base reset, so clear
+   their paint with an equal-specificity rule. Only the UA-only chrome (gradient +
+   inset shadow) is stripped here; component hover rules are boosted below. */
+button:enabled:hover,
+button:enabled:active {
+    background-image: none;
+    box-shadow: none;
 }
 
 button:disabled {
@@ -258,7 +271,7 @@ select {
     cursor: pointer;
 }
 
-.menu-title:hover {
+button.menu-title:hover {
     background-color: var(--bg-hover);
     color: var(--text-strong);
 }
@@ -310,7 +323,7 @@ select {
     cursor: pointer;
 }
 
-.menu-item:hover {
+button.menu-item:hover {
     background-color: var(--accent);
     color: #ffffff;
 }
@@ -435,7 +448,7 @@ select {
     flex-shrink: 0;
 }
 
-.icon-btn:hover {
+button.icon-btn:hover {
     background-color: var(--bg-hover);
     border-color: var(--line-strong);
     color: var(--text-strong);
@@ -478,7 +491,7 @@ select {
     border-color: var(--bg-sunken);
 }
 
-.options-zoom .icon-btn:hover {
+.options-zoom button.icon-btn:hover {
     background-color: #252b33;
     border-color: #333a43;
 }
@@ -498,7 +511,7 @@ select {
     cursor: pointer;
 }
 
-.zoom-value:hover {
+button.zoom-value:hover {
     color: var(--text-strong);
 }
 
@@ -586,7 +599,7 @@ select {
     flex-shrink: 0;
 }
 
-.tool-btn:hover {
+button.tool-btn:hover {
     background-color: var(--bg-hover);
     color: var(--text-strong);
 }
@@ -763,7 +776,7 @@ select {
     cursor: pointer;
 }
 
-.doc-tab-add:hover {
+button.doc-tab-add:hover {
     background-color: var(--bg-hover);
     color: var(--text-strong);
 }
@@ -1011,7 +1024,7 @@ select {
     flex-shrink: 0;
 }
 
-.mini-btn:hover {
+button.mini-btn:hover, .mini-btn:hover {
     background-color: var(--bg-hover);
     color: var(--text-strong);
 }
@@ -1053,7 +1066,14 @@ select {
     font-variant-numeric: tabular-nums;
 }
 
-.slider-input {
+/* The default sheet's input[type="range"] rule is one specificity step above a
+   plain class, so name the element here and restate the reset globally. */
+input[type="range"] {
+    margin: 0;
+    background-color: transparent;
+}
+
+input.slider-input {
     width: 100%;
     height: 18px;
     min-height: 18px;
@@ -1190,7 +1210,7 @@ select {
     cursor: pointer;
 }
 
-.layer-toggle:hover {
+button.layer-toggle:hover {
     background-color: var(--bg-hover);
     color: var(--text-strong);
 }
@@ -1400,7 +1420,7 @@ select {
     cursor: pointer;
 }
 
-.btn:hover {
+button.btn:hover {
     background-color: var(--bg-hover);
     color: var(--text-strong);
 }
@@ -2131,7 +2151,7 @@ select {
     height: 20px;
 }
 
-.colour-target:hover {
+button.colour-target:hover, .colour-target:hover {
     border-color: var(--line-strong);
     background-color: #262b32;
 }

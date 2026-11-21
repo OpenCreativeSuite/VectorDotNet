@@ -7,7 +7,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <DefaultItemExcludes>$(DefaultItemExcludes);builds/**;tests/**</DefaultItemExcludes>
-    <DonkehVersion Condition="'$(DonkehVersion)' == ''">1.0.44</DonkehVersion>
+    <DonkehVersion Condition="'$(DonkehVersion)' == ''">1.0.45</DonkehVersion>
     <!-- HtmlHelper drops null children at runtime, which is what makes Show(...)
          composable, but the parameters are annotated as Node[] rather than
          Node?[]. Passing a conditional child is correct and the warning is noise. -->
