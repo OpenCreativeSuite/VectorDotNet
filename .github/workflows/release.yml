@@ -56,14 +56,19 @@ jobs:
           dotnet-version: "10.0.x"
 
       - name: Publish
+        # Silk.NET's native loader resolves glfw3.dll from the app base directory
+        # and Assembly.Location, both of which break under PublishSingleFile
+        # (the native lib is extracted to a temp folder that Silk.NET never
+        # searches). Publishing a normal folder keeps the native dll next to the
+        # executable, which is what makes GlfwPlatform applicable.
         run: >
           dotnet publish VectorDotNet.csproj
           --configuration Release
           --runtime ${{ matrix.rid }}
           --self-contained true
           --output publish
-          -p:PublishSingleFile=true
-          -p:IncludeNativeLibrariesForSelfExtract=true
+          -p:PublishSingleFile=false
+          -p:IncludeNativeLibrariesForSelfExtract=false
           -p:PublishTrimmed=false
           -p:DebugType=None
           -p:DebugSymbols=false
